@@ -1,2 +1,3 @@
-# apuntes25
-Apuntes del IES Ntra Sra de los Remedios
+# Apuntes Curso 24/25
+
+Apuntes en el IES Ntra Sra de los Remedios (Ubrique)
