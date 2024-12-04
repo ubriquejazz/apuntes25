@@ -1,3 +1,5 @@
+# Pseudocodigo con PSeInt
+
 1. Pseudocodigo para SUMAR DOS NÚMEROS LEÍDOS POR TECLADO
 1. Pseudocodigo para MULTIPLICAR 3 NÚMEROS
 1. Pseudocodigo para RESTAR 2 NÚMEROS
