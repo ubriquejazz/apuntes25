@@ -26,7 +26,7 @@ Una vez que sepamos crear imagenes/contenedores docker veremos en profundidad al
 
 | Code | Practica | Comments
 | ---- | -------- | --
-| C1.1 | Control de versiones Git |
+| C1.1 | Control de versiones GitHub |
 | C2.1 | Integración continua GitHub Actions |
 | C3.1 | Documentación con markdown |
-| C4.1 | Docker | CEP de la Cuesta
+| C4.1 | Docker | CEP Castilleja de la Cuesta
