@@ -25,3 +25,7 @@
 3. Aplica mecanismos de **seguridad activa** describiendo sus características y relacionándolas con las necesidades de uso del sistema informático
 
 4. Asegura la **privacidad** de la información transmitida en redes informáticas describiendo vulnerabilidades e instalando software especifico.
+
+## References
+
+- McGraw Hill
