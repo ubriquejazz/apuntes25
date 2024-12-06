@@ -8,7 +8,7 @@
 - Interact with the web server using a terminal interface
 - State the purpose of the **hosts** file, locate and edit it
 
-## Installing and configure Apache
+## Installing and configure 
 
 ```
 apt-get install apache2
