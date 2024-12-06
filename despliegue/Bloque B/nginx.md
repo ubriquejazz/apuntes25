@@ -4,7 +4,7 @@
 
 - Instalación servidor web Nginx
 - Creación de las carpeta del sitio web
-- Configuración de servidor web NGINX
+- Configuración de servidor web
 - Comprobaciones
   - Correcto funcionamiento
   - Registros del servidor
@@ -13,7 +13,6 @@
 
 ## Autenticación en Nginx
 
-- Introduccion
 - Paquetes necesarios
 - Creación de usuarios y contraseñas para el acceso web
 - Configurando el servidor Nginx para usar autenticación básica
@@ -41,7 +40,9 @@
   - Nginx Proxy Inverso
 - Comprobación del balanceo de carga cuando cae un servidor
 
-## Proxy inverso y balanceo de carga con SSL en NGINX
+## Proxy inverso y balanceo de carga con SSL 
+
+TBC
 
 ## Referencias
 

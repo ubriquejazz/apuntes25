@@ -10,10 +10,17 @@
 | A2.1 | Herr. gráficas y comandos FTP |
 | A2.2 | Servidor de transferencia de archivos proFTP |
 
-## C. Arquitectura Web. Implantación y administración de servidores web
+## B. Arquitectura Web. Implantación y administración de servidores web
 
 | Code | Practica | Comments
 | ---- | -------- | --
-| A3.1 | Control de versiones Git |
-| A3.2 | Integración continua GitHub Actions |
-| A3.3 | Documentación con markdown |
+| B1.1 | Instalacion y config Nginx 
+| B1.2 | Instalacion y config Apache 
+
+## C. Control de versiones
+
+| Code | Practica | Comments
+| ---- | -------- | --
+| C1.1 | Control de versiones Git |
+| C2.1 | Integración continua GitHub Actions |
+| C3.1 | Documentación con markdown |
