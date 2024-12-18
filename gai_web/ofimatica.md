@@ -1,2 +1,0 @@
-## Ofimatica en la nube
-
