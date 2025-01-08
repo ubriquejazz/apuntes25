@@ -1,11 +1,12 @@
-# Bloque B
+# Slackware
 
-- Lab 03 : Linux systems and shell scripting
-- Lab 04 : deamons and processes
-- Lab 05 : samba
-- Lab 06 : email
-- Lab 07 : apache and php
-- Lab 08 : mysql
-- Lab 09 : network traffic (iptables)
-- Lab 10 : Links, file compression and other tools
-- Lab 11 : NGiNX de [Raul Profesor](https://raul-profesor.github.io/DEAW/)
+| Lab | Topic |
+| --- | ----- |
+| 3 | Linux systems and shell scripting
+| 4 | Daemons and processes
+| 6 | Email under Linux
+| 7 | Apache HTTP server and PHP
+| 8 | MySQL (optional)
+| 9 | Network traffic analysis
+| 10 | Further UNIX tools: Links, file compression and other tools
+| 11 | NGiNX de [Raul](https://raul-profesor.github.io/DEAW/) (optional)
