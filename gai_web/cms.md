@@ -8,7 +8,6 @@ Imagina tener que realizar de forma manual actualizaciones semanales o, incluso,
 
 Para esto y mucho más, un CMS es la solución ideal para todos los que necesitan un sitio web que no sea 100% estático o momentáneo (o sea, hecho para permanecer funcionando por un breve período).
 
-
 ### Aplicaciones web: estructura y navegacion
 
 El diseño de una página web es la manera en que se estructura y presenta la información a los usuarios, dividiéndose en tres conceptos principales:
@@ -19,20 +18,15 @@ El diseño de una página web es la manera en que se estructura y presenta la in
 
 - Los front end son las vistas de las páginas web que habitualmente se visitan. Están colgadas de dominios que facilitan el ser recordados por los posibles visitantes. Deben ser atractivas a quienes entran puesto que deben ser un gancho para conseguir que se vuelvan a visitar nuevamente. 
 
-El diseño de este front end debe ser simple y mostrar todas las posibilidades que los visitantes puedan necesitar y es conveniente que resalte las opciones que a la empresa propietaria le interese potenciar. Habitualmente, los clientes y-las-el;entas son perezosos a la hora de investigar las opciones de las webs, es primordial que el diseño y la organización de la página consigan su objetivo en pocos clics o desistirá en su empeño. 
+El diseño de este front end debe ser simple y mostrar todas las posibilidades que los visitantes puedan necesitar y es conveniente que resalte las opciones que a la empresa propietaria le interese potenciar. Habitualmente, los clientes son perezosos a la hora de investigar las opciones de las webs, es primordial que el diseño y la organización de la página consigan su objetivo en pocos clics o desistirá en su empeño. 
 
 A nivel técnico, una aplicación web se divide en: 
 
-- El dominio es el nombre que todo el mundo recordará, el que al ponerlo en el buscador lleva a la página web. 
-Google.es, wikipedia.org o mecd.gob.es son ejemplos de dominios fácilmente reconocibles por cualquier estudiante. 
-El dominio es técnicamente independiente del contenido que vaya a mostrar porque su contenido es apuntar a un archivo en un servidor web
+- El dominio es el nombre que todo el mundo recordará, el que al ponerlo en el buscador lleva a la página web.  Google.es, wikipedia.org o mecd.gob.es son ejemplos de dominios fácilmente reconocibles por cualquier estudiante. El dominio es técnicamente independiente del contenido que vaya a mostrar porque su contenido es apuntar a un archivo en un servidor web
 
-- Los archivos que componen la pagina se colocan en el especio web, que es un fragmento de disco duro en un servidor que permite acceso publico. 
-Una pagina se compone de distintos archivos como son fotografias, videos, audios o los documentos que contengan el codigo que el servidor web interpreta para montar la pagina (HTML, CSS, etc)
+- Los archivos que componen la pagina se colocan en el especio web, que es un fragmento de disco duro en un servidor que permite acceso publico. Una pagina se compone de distintos archivos como son fotografias, videos, audios o los documentos que contengan el codigo que el cliente web interpreta para montar la pagina (HTML, CSS, etc)
 
-- El servidor de bases de datos (opcional) se ocupa de guardar e interrelacionar registros con informacion que la pagina web puede usar para ofrecer mayores funcionalidades y apoyar las aplicaciones web. 
-Dentro del esqua de herramientas tecnicas que forma una web, la base de datos es un elemento opcional ya que no todas las paginas lo usan.
-
+- El servidor de bases de datos (opcional) se ocupa de guardar e interrelacionar registros con informacion que la pagina web puede usar para ofrecer mayores funcionalidades y apoyar las aplicaciones web. Dentro del esquema de herramientas tecnicas que forma una web, la base de datos es un elemento opcional ya que no todas las paginas lo usan.
 
 ### Accesibilidad vs Usabilidad
 
@@ -50,7 +44,6 @@ Relación con otros términos:
 
 - Diseño y Layout: Herramientas para facilitar la accesibilidad, pero no son sinónimos.
 
-
 ### Actualizacion de contenidos
 
 El contenido de una página web incluye textos, imágenes, videos y cualquier otro elemento que se ofrece al usuario para informarlo, entretenerlo o hacerlo interactuar con el sitio.
@@ -65,4 +58,3 @@ Errores comunes:
 
 - Exceso de contenido que abruma al visitante.
 - Falta de estructura que dificulta el acceso a la información.
-
