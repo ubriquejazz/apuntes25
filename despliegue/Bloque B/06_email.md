@@ -75,58 +75,5 @@ disconnects.
 More info at https://www.hmailserver.com/documentation/latest/?page=whatis_pop3imapsmtp 
 
 ### 3.7 From your host machine, telnet to your VM on port 110. Explore talking to the server (see example of POP3 session). 
- 
 
-# Exercise 4. Processes and networking 
-
-## 2.1. Execute the command nmap localhost. Write down the processes returned.  
-
-The  command  nmap  (network  mapper)  is  an  utility  that  uses  raw  IP  packets  to  determine  what hosts  are  available  on  the  network,  what  services  those  hosts  are  offering,  what  OS  they  are running, etc. It was designed to rapidly scan large networks, but works fine against single hosts. 
-
-Many  sysadmins  also  find  it  useful  for  tasks  such  as  network  inventory,  managing  service  upgrade, etc. For example to see the services our machine is offering (three processes): 
-
-    37/tcp time - server included in a set called "tcp small services" (deprecated). 
-
-    113/tcp auth - server to identify the user behind a particular TCP connection. 
-
-    22/tcp ssh - server to enable secured remote access (sshd is the server daemon) 
-
-## 4.1. Edit /etc/inetd.conf to enable telnet and ftp
-
-The daemon inetd provides Internet services. For each configured service, it listens for requests from connecting clients. Requests are served by spawning a process which runs the appropriate executable, but simple services such as echo are served by inetd itself. 
-
-Let’s first remove the service in port 37. We are going to edit the file /etc/inetd.conf. Once it has been updated, the inetd service is restarted running this:
-
-    # ./etc/rc.d/rc.inetd restart 
-
-Note that all processes listed in the /etc/rc.d/ directory start with the prefix “rc” (rc.inetd).
-The main reason of using the SSH protocol instead is because telnet sends data in plain text. SSH uses a public key for authentication.
-
-    # telnet localhost
-
-Now  let’s  enable  ftp  (port  21).  We  are  going  to  use  the  vsftpd  daemon.  Its  configuration  files  is located at /etc/vsftp.conf. There are two changes:
-
-- Change anonymous_enable=YES to NO to disable Anonymous FTP. 
-- Uncomment local_enable=YES and write_enable=YES to allow you to make changes to the FTP server. 
-
-| Command | FTP operation |
-| ------- | ------------- |
-| put | copy one file from the local machine to the remote machine
-| get | copy one file from the remote machine to the local machine
-| ls, mkdir, rmdir, cd | remote file-folder management
-| lcd | same as cd in local
-
-
-    ftp localhost
-
-More FTP commands can be found [here](https://www.cs.colostate.edu/helpdocs/ftp.html)
-
-## 4.2. Edit /etc/inetd.conf again to disable ftp.  
-
-Once the line is commented in the config file, the process should be restarted: 
- 
-    # ./etc/rc.d/rc.inetd restart 
-
-## 4.3 Can you ftp as root? Is a good idea?
-
-Basically it’s like arming a little kid with an AK47, while he can happily play with his paintball gun.
+...
