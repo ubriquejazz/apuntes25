@@ -3,6 +3,7 @@
 ## Temas
 
 Son plantillas que nos permiten personalizar el diseño y el aspecto de nuestra web
+
 - Oficiales de WordPress o no
 - Gratuitas o de pago
 - Desde cero
@@ -14,6 +15,7 @@ Los temas se pueden descargar desde paginas externos
 ## Widgets
 
 Los widgets son elementos que se puede colocar en distintos puntos de la web (footer o menus). Por ejemplos son widgets:
+
 - enlaces a redes sociales (feeds)
 - formularios
 - listas de enlaces mas importantes
@@ -22,20 +24,40 @@ Los widgets son elementos que se puede colocar en distintos puntos de la web (fo
 
 ## Plugins
 
-O extensiones, amplian la funcionalidad de la web. 
+O extensiones, amplian la funcionalidad de la web.
+
 - Aumentar la seguridad de la web: Wordfence Security
 - Crear un formulario: Contacto From 7
 - Crear una agenda de eventos
 - Hacer un envio de mails: MailChimp
-- Otros: Yoast SEO, WooCommerce, 
+- Otros: Yoast SEO, WooCommerce, etc.
 
-## Material 
+## Material
 
 - VIDEO: Els themes de WordPress: com funcionen?
 - VIDEO: Widgets: què són i com instal·lar-los?
 - PDF: Creadores Visuales de CSS para WordPress: Qué son y cómo usarlos?
 - PDF: Consejos para elegir un buen plugin
+- VIDEO: Crea el teu espai multilingüe
+- VIDEO: Crea una intranet al teu WordPress
 
+## Intranet
+
+Una intranet es una red privada diseñada para la colaboración interna dentro de una organización, lo que permite que los miembros de un equipo puedan compartir información y/o documentos de manera segura. Sus usos pueden ser variados, aunque siempre focalizados en la utilidad para los empleados: intercambiar conocimiento relativo al negocio, eventos y agenda, o servir de canal de comunicación.
+
+Vamos a ver tres plugins:
+
+### Simple Intranet
+
+Parecido a BuddyPress, Simple Intranet concentra una serie de plugins orientados para corporaciones y las intranets: directorio de empleados, eventos y calendario, avisos de vacaciones o ausencia de empleados, organigramas por departamentos, wiki, etc.
+
+### All in one intranet
+
+All in one intranet está centrado en la privacidad, este plugin nos ofrece un conjunto de complementos para definir de una manera más precisa quiénes pueden acceder al sitio y bajo qué condiciones, ofreciendo nuevas opciones de seguridad para WordPress
+
+### BuddyPress
+
+BuddyPress es un plugin que nos permite crear comunidades online donde los usuarios pueden interactuar de diversas maneras y donde existe una inmensa cantidad de servicios integrables por medio de plugins adicionales. BuddyPress es enorme pero tiene la particularidad de que se pueden seleccionar las funciones que se desean incorporar en el sitio web, de modo que podemos conseguir que el servicio se adapte a lo que verdaderamente necesita nuestra empresa. Entre sus cientos de funcionalidades, permite la gestión de archivos para descarga por parte de los usuarios.
 
 ## Ideas clave
 
@@ -71,27 +93,27 @@ Ahora es el momento de poner en práctica los conceptos analizados durante el te
 
 Dependiendo del estilo y el estilo que quieras dar a la página web de tu negocio, puedes elegir entre una plantilla:
 
-    Sargento, sobrio y formal
-    Divertido, joven e informal
+- Sargento, sobrio y formal
+- Divertido, joven e informal
 
 ### Algunos plugins.
 
 Entre los que no pueden faltar:
 
-    Yoast SEO: para optimizar la web en los motores de búsqueda
-    Seguridad de Wordfence: para proteger la web
-    MailChimp: para tener un servicio de newsletter
+- Yoast SEO: para optimizar la web en los motores de búsqueda
+- Seguridad de Wordfence: para proteger la web
+- MailChimp: para tener un servicio de newsletter
 
 ### Algunos widgets.
 
 Al menos instale lo siguiente:
 
-    Para suscribirse al boletín de noticias
-    Un motor de búsqueda de contenido
-    Enlaces a las partes más importantes de la página web
+- Para suscribirse al boletín de noticias
+- Un motor de búsqueda de contenido
+- Enlaces a las partes más importantes de la página web
 
-Puede estar en una papelería, fruta, mercery, agencia de viajes... las posibilidades son infinitas, pero lo importante es que sigas un hilo conductor. Algunos consejos útiles que debe tener en cuenta son:
+Puede estar en una papelería, fruta, merceria, agencia de viajes... las posibilidades son infinitas, pero lo importante es que sigas un hilo conductor. Algunos consejos útiles que debe tener en cuenta son:
 
-    Piensa en qué estrategia quieres seguir.
-    Sea paciente cuando busque los temas correctos, plugins y widgets que se ajusten a sus necesidades.
-    Y, lo más importante, trate de hacer lo que ha decidido instalar, para ver si funciona correctamente y responder a sus expectativas.
+1. Piensa en qué estrategia quieres seguir.
+1. Se paciente cuando busque los temas correctos, plugins y widgets que se ajusten a sus necesidades.
+1. Y, lo más importante, trata de hacer lo que ha decidido instalar, para ver si funciona correctamente y responder a sus expectativas.
