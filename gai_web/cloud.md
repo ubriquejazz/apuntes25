@@ -15,15 +15,11 @@ Se abren dos posibilidades para el uso de los archivos compartidos entre varios 
 - Que los archivos compartidos sean públicos.
 - Que los archivos sean compartidos de forma acotada.
 
-Cuando la utilidad del documento es aplicada para un conjunto diverso y grande de usuarios, además, no contiene datos que deban ser preservados en secreto, se puede proceder a publicarlo en un repositorio web de acceso público.Lo mismo ocurre cuando el interés está en la parte del que hace público el documento, por ejemplo por motivos de publicidad.
+Cuando la utilidad del documento es aplicada para un conjunto diverso y grande de usuarios, además, no contiene datos que deban ser preservados en secreto, se puede proceder a publicarlo en un repositorio web de acceso público. Lo mismo ocurre cuando el interés está en la parte del que hace público el documento, por ejemplo por motivos de publicidad.
 
-Los métodos de acceso se pueden complicar más. Se puede utilizar sistemas de identificación biométricos que comprueban, por ejemPIO, el iris o la huella dactilar. Se puede comprobar una identificación validada por terceros de confianza, como puede ser una firma o un **certificado digital**, o se puede establecer un conjunto o varios de estas medidas de seguridad.
+Los métodos de acceso se pueden complicar más. Se puede utilizar sistemas de identificación biométricos que comprueban, por ejemplo, el iris o la huella dactilar. Se puede comprobar una identificación validada por terceros de confianza, como puede ser una firma o un **certificado digital**, o se puede establecer un conjunto o varios de estas medidas de seguridad.
 
-Para acotar el acceso es necesario establecer algún método de identificación sobre el que el sistema pueda determinar si está habilitado o no para acceder a dicho archivo.La forma más sencilla de implementar un nivel de seguridad es por el método de usuario y contraseña provistas por el administrador del archivo.
-
-Figura 6.18. La firma electrónica es un conjunto de datos que da fe que el firmante es quien dice ser.En España se incluye en el DNI desde el año 2006 y cada día existen más trámites personales que se pueden hacer telemáticamente gracias a él.
-
-En todos los casos se han de cumplir unos requisitos sin los que el archivo será inaccesible.
+Para acotar el acceso es necesario establecer algún método de identificación sobre el que el sistema pueda determinar si está habilitado o no para acceder a dicho archivo.La forma más sencilla de implementar un nivel de seguridad es por el método de **usuario y contraseña** provistas por el administrador del archivo. En todos los casos se han de cumplir unos requisitos sin los que el archivo será inaccesible.
 
 Desde el punto de vista del archivo compartido, existen dos formas distintas de actuar con respecto a los accesos permitidos.Esta limitación la establece el software de edición que se esté utilizando.
 
@@ -39,6 +35,9 @@ Para evitar que dos autores editen la misma porción de texto al mismo tiempo de
 Un ejemplo sería aquel en el que cualquier persona con acceso a internet puede tener una copia del documento necesario para apuntarse, si lo desea, a la escuela de música de su localidad' localizando y accediendo al enlace que tiene la página web que lo gestiona.Es un document0 compartido de forma pública.
 
 También, una persona puede acceder a la página web de la [seguridad social](https://sede.segsocial.gob.es) y desde ahí solicitar su propio certificado de vida laboral.Este documento no es de acceso público y hay que acreditar tener los permisos necesarios para poder verlo.Si no se conoce la clave o no se tiene la firma digital que acredite ser el propietario, el acceso queda automáticamente denegado.
+
+
+![Figura 6.18](https://images.app.goo.gl/5VdHAphFZxJD1Nz69) La firma electrónica es un conjunto de datos que da fe que el firmante es quien dice ser.En España se incluye en el DNI desde el año 2006 y cada día existen más trámites personales que se pueden hacer telemáticamente gracias a él.
 
 ## Ofimatica en la web
 
