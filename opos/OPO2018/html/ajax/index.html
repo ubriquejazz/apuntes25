@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Ajax</title>
+    <script>
+        window.onload = function(){
+            xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function(){
+                    // Comment from Juana
+            }
+            xhr.onload = function(){
+                console.log(this.responseText);
+                let persona = JSON.parse(this.responseText);
+                for (x in persona){
+                    console.log(persona[x]);
+                }
+                console.log(persona);
+                document.getElementById("p1").innerHTML = persona.title;
+            }
+            xhr.open("GET","https://jsonplace777holder.typicode.com/todos/2",false);
+            xhr.send();
+        }
+    </script>
+</head>
+<body>
+    <p id="p1"></p>
+</body>
+</html>

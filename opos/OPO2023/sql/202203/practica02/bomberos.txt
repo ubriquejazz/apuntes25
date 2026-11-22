@@ -1,0 +1,16 @@
+Practica 2. Consultas sobre la BD bomberos.
+-------------------------------------------
+
+1. Listado alfabético de todos los bomberos de la provincia indicando parque al que pertenece.
+
+2. Listado de todos los parques de la provincia, ordenados descendentemente por número de coches.
+
+3. Listado alfabético de indicando edad y parque.
+
+4. Media de edad de los bomberos de la provincia, agrupados por parque descendentemente, 
+indicando parque, localidad, número de bomberos y media de edad.
+
+5. Servicios prestados por cada parque, indicando equipo que realizó el servicio (mostrando todos
+nombres de los bomberos del equipo) y ordenado parque al que pertenece.
+
+6. Número de servicios atendidos por cada parque durante el año actual (se considerará el 2007).

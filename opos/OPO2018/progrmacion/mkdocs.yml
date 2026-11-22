@@ -1,0 +1,17 @@
+site_name: PD2023
+site_url: https://ubriquejazz.github.io
+nav:
+    - 01. Elementos de las BDs: U101.md
+    - 02. Modelo E/R extendido: U201.md
+    - 03. M.relacional: U202.md
+    - 04. Normalizacion: U203.md
+    - 05. Diseno fisico de BDs: U301.md
+    - 06. SQL. Consultas sencillas (Select): U401.md
+    - 07. SQL. Clausulas avanzadas: U402.md
+    - 08. Edicion y mantenimiento de datos (Insert/Update/Delete): U501.md
+    - 09. Transacciones. Bloqueos: U502.md
+    - 10. Introduccion al PL/SQL: U503.md
+    - 11. Paginas web con PHP y MySQL: U504.md
+    - 12. Seguridad de datos: U601.md
+    - About: about.md
+theme: readthedocs

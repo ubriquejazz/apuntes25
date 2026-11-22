@@ -1,0 +1,11 @@
+
+Comunidad Madrid (2018/2021) - PTFP SAI
+
+Realizar script de Unix/Linux que simule el comando find.
+Podra recibir de uno a tres parametros:
+ 1) buscara el fichero en el directorio actual
+ 2) buscara el fichero
+     directorio (ruta completa), fichero a buscar en ella
+     fichero y la opcion -s (buscara de forna recursiva en ruta actual)
+ 3) directorio (ruta completa), fichero y opcopn -s 
+    buscara el fichero en la ruta y subdirectorios

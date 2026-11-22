@@ -1,0 +1,93 @@
+# Diseno Interfaces Web
+
+## Planificación de interfaces gráficas:
+
+Elementos del diseño: percepción visual.
+Textura (puntos, línea, forma, volumen y profundidad).
+Color, tipografía, iconos.
+Interacción persona-ordenador.
+Interpretación de guías de estilo. Elementos.
+Detección de patrones.
+Características: usable, visual, educativa y actualizada.
+Generación de documentos y sitios web.
+Componentes de una interfaz web.
+Zonas de navegación, contenido, iteración.
+Aplicaciones para desarrollo web.
+Lenguajes de marcas.
+Mapa de navegación. Prototipos.
+Maquetación web. Elementos de ordenación.
+Tablas. Capas. Marcos.
+Plantilla de diseño.
+
+## Uso de estilos:
+
+Estilos en línea basados en etiquetas y en clases.
+Crear y vincular hojas de estilo.
+Crear y vincular hojas de estilo en cascada externa.
+Hojas de estilo auditivas.
+Hojas de estilo para imprimir.
+Herramientas y test de verificación.
+
+# Implementación de contenido multimedia:
+
+Tipos de Imágenes en la web.
+Logos, iconos, banners e imágenes.
+Derechos de la propiedad intelectual. Licencias. Ley de la propiedad intelectual.
+Derechos de autor. Registro de contenido.
+Entidades. Gestión colectiva.
+Imágenes: mapa de bits, imagen vectorial. Software para crear y procesar imágenes.
+Formatos de imágenes.
+Tamaño y resolución. Filtros y efectos.
+Optimización de imágenes para la web.
+Audio: formatos. Conversiones de formatos (exportar e importar).
+Vídeo: codificación de vídeo, conversiones de formatos (exportar e importar).
+Animaciones. Fotogramas y capas.
+Animación de imágenes y texto.
+Integración de audio y vídeo en una animación. Efectos.
+
+## Integración de contenido interactivo:
+
+Elementos interactivos básicos y avanzados.
+Comportamientos interactivos. Comportamiento de los elementos.
+Modificación de los comportamientos.
+Cambio de las propiedades de un elemento.
+Ejecución de secuencias de comandos.
+Reproducción de sonido, video y animación.
+
+## Diseño de webs accesibles:
+
+Concepto de accesibilidad web.
+El Consorcio World Wide Web (W3C).
+Pautas de Accesibilidad al Contenido en la Web (WCAG).
+Principios generales de diseño accesible.
+Técnicas para satisfacer los requisitos definidos en las WCAG.
+Técnicas fundamentales.
+Técnicas HTML. Técnicas CSS.
+Prioridades. Puntos de verificación. Niveles de adecuación.
+Métodos para realizar revisiones preliminares y evaluaciones de adecuación o
+conformidad de documentos web.
+Herramientas de análisis de accesibilidad web.
+Software y herramientas on-line.
+Testeo de la accesibilidad web desde diferentes navegadores.
+Testeo de la accesibilidad web desde dispositivos móviles.
+
+## Implementación de la usabilidad en la web. Diseño amigable:
+
+Concepto de usabilidad.
+Análisis de la usabilidad. Técnicas.
+Principios recomendados para conseguir webs amigables.
+Identificación del objetivo de la web. Tipos de usuario.
+Identificación de las necesidades de diferentes perfiles de usuarios.
+Adaptación del interfaz a dichos perfiles.
+Barreras identificadas por los usuarios.
+Información fácilmente accesible.
+Velocidad de conexión. Uso del lenguaje y vocabulario adecuado.
+Consistencia interna. Importancia del uso de estándares externos.
+Navegación fácilmente recordada frente a navegación redescubierta.
+Facilidad de navegación en la web.
+Facilidad de navegación en la web mediante el teclado.
+Facilidad de navegación en la web mediante el ratón.
+Ctrl de las diferentes opciones que se deben visualizar/ocultar en cada momento.
+Verificación de la usabilidad en diferentes navegadores y tecnologías.
+Herramientas y test de verificación.
+

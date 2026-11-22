@@ -1,0 +1,27 @@
+::Q012:: En una red en la que se utiliza el protocolo DHCP {
+~Cuando se inicializa el cliente DHCP envía un broadcast DHCPDISCOVER al puerto 67/TCP
+=Para que la configuración a través de DHCP funcione, no es necesario que el servidor DHCP se encuentre en la misma red que el cliente
+~Si el servidor DHCP llegara a agotar el rango de direcciones disponible, enviará a sus clientes una configuración automática mediante APIPA (Automatic Private IP Addressing).
+~En una red con más de un servidor DHCP se establece una comunicación entre ellos antes de entregar la oferta a los clientes
+}
+
+::Q013:: La dirección IP 216.58.214.35 pertenece al dominio: midominio.com. ¿Cuál es el nombre correcto para que pueda resolverse en la zona inversa? {
+= 35.214.58.216.in-addr.arpa.
+~ 216.58.214.35.arpa.
+~ 35.214.58.216.ipv4.arpa.
+~ 216.58.214.35.midominio.com.
+}
+
+::Q014:: Selecciona la correcta {
+~ Un objeto de una clase A que hereda de otra clase B siempre puede acceder a todos los atributos heredados de B
+~ Al crear objetos de una clase abstracta, sólo podremos usar los métodos que no sean abstractos
+~ Una clase derivada sólo puede acceder a un método privado de la superclase si y sólo si ambas pertenecen al mismo paquete
+= Todas son incorrectas
+}
+
+::Q015:: La siguiente regla del cortafuego iptables -t nat -A POSTROUTING -s 192.168.1.0/24 -o eth0 -j MASQUERADE {
+~No permite que el tráfico interno salga hacia fuera de nuestra red
+=Permite que los paquetes de la red local salgan a internet con la IP pública del ISP
+~Habilita el enrutamiento de paquetes hacia el exterior de la red 
+~Permite los mensajes salientes desde cualquier ...
+}

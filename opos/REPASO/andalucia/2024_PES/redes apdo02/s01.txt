@@ -1,0 +1,106 @@
+# Switch 01
+
+! 1. Create the VLANs
+vlan 10
+ name E1_DATA
+vlan 20
+ name E1_VOICE
+vlan 30
+ name E2_DATA
+vlan 40
+ name E2_VOICE
+vlan 99
+ name MANAGEMENT
+exit
+
+! 2. Configure the Uplink to SCC as an EtherChannel Trunk
+! Assume the two physical interfaces connecting to SCC are GigabitEthernet0/1 and GigabitEthernet0/2.
+! (Adjust interface names based on your switch model)
+interface range GigabitEthernet0/1 - 2
+ description Uplink_to_SCC_Physical_Links
+ channel-group 1 mode active ! Use LACP for dynamic negotiation (active)
+ no shutdown
+exit
+
+interface Port-channel1
+ description Uplink_to_SCC_Logical_Trunk
+ switchport trunk encapsulation dot1q ! Essential for 802.1Q tagging
+ switchport mode trunk
+ switchport trunk allowed vlan 10,20,30,40,99 ! Allow all relevant VLANs to traverse the trunk
+ ! Optional: switchport nonegotiate (if you want to force trunking without DTP)
+ no shutdown
+exit
+
+! 3. Configure Access Ports for E1 Devices
+! The diagram shows 32 Cat. 6A cables from S01. We'll use example ranges.
+! Assuming E1 PCs on Gi1/0/1 - Gi1/0/24
+! Assuming E1 IPTELs on Gi1/0/25 - Gi1/0/32
+
+! E1 Data Ports (for PCs directly connected)
+interface range GigabitEthernet1/0/1 - 24
+ description E1_PC_Access_Port
+ switchport mode access
+ switchport access vlan 10 ! Assign to E1 Data VLAN
+ switchport port-security ! Recommended: Enable port-security
+ switchport port-security maximum 1 ! Allow only one MAC address per port
+ switchport port-security violation restrict ! Drop packets and log violation
+ spanning-tree portfast ! Speeds up port transition to forwarding state
+ no shutdown
+exit
+
+! E1 Voice Ports (for IP Phones with PCs daisy-chained)
+interface range GigabitEthernet1/0/25 - 32
+ description E1_IPTEL_Access_Port
+ switchport mode access
+ switchport access vlan 10 ! This is for the PC connected THROUGH the phone (data)
+ switchport voice vlan 20 ! This is for the IP Phone itself (voice)
+ switchport port-security ! Recommended: Enable port-security
+ switchport port-security maximum 2 ! Allow phone MAC + PC MAC
+ switchport port-security violation restrict
+ spanning-tree portfast
+ ! Optional: mls qos trust dscp ! Trust DSCP markings from the IP Phone
+ no shutdown
+exit
+
+! 4. Configure Access Ports for E2 Devices
+! The diagram shows some E2 devices connected to S01 (E2 PC-01 to E2 PC-10 and E2 IPTEL-01 to E2 IPTEL-06)
+! Assuming E2 PCs on Gi1/0/33 - Gi1/0/42
+! Assuming E2 IPTELs on Gi1/0/43 - Gi1/0/48
+
+! E2 Data Ports (for PCs directly connected)
+interface range GigabitEthernet1/0/33 - 42
+ description E2_PC_Access_Port
+ switchport mode access
+ switchport access vlan 30 ! Assign to E2 Data VLAN
+ switchport port-security
+ switchport port-security maximum 1
+ switchport port-security violation restrict
+ spanning-tree portfast
+ no shutdown
+exit
+
+! E2 Voice Ports (for IP Phones with PCs daisy-chained)
+interface range GigabitEthernet1/0/43 - 48
+ description E2_IPTEL_Access_Port
+ switchport mode access
+ switchport access vlan 30 ! Data VLAN for PC
+ switchport voice vlan 40 ! Voice VLAN for IP Phone
+ switchport port-security
+ switchport port-security maximum 2
+ switchport port-security violation restrict
+ spanning-tree portfast
+ ! Optional: mls qos trust dscp
+ no shutdown
+exit
+
+! 5. Configure Management IP Address (Optional but Recommended)
+! If S01 needs to be managed via IP (e.g., Telnet/SSH) from another VLAN
+interface vlan 99
+ description S01_Management_Interface
+ ip address 192.168.99.10 255.255.255.0 ! Example IP address (choose an unused one in your management subnet)
+ no shutdown
+exit
+
+! Set default gateway for management (if management is in a different subnet)
+ip default-gateway 192.168.99.1 ! Example gateway
+

@@ -1,0 +1,42 @@
+@startuml
+
+abstract class Persona {
+    # myActividad: Actividad*
+    + virtual display(): void
+    + setActividad(v: Actividad*): void
+    + enrolActividad(): void
+}
+
+class Profesor is Persona {
+    # departamento: string
+    + display(): void
+}
+
+class Alumno is Persona {
+    - dni: string
+    + getDNI(): string
+    + setDNI(vDNI: string): void
+    + display(): void
+}
+
+abstract class Actividad {
+    + virtual inscActividad(): void
+}
+
+class Baile is Actividad {
+    + inscActividad(): void
+}
+
+class Monte is Actividad{
+    + inscActividad(): void
+}
+
+Persona <|-- Profesor
+Persona <|-- Alumno
+
+Actividad <|-- Baile
+Actividad <|-- Monte
+
+Persona "1" -- "1" Actividad : myActividad
+
+@enduml

@@ -1,0 +1,400 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//ES">
+
+<!--Converted with LaTeX2HTML 99.2beta6 (1.42)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Ejercicios resueltos sobre ficheros y directorios</TITLE>
+<META NAME="description" CONTENT="Ejercicios resueltos sobre ficheros y directorios">
+<META NAME="keywords" CONTENT="shell-completa">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v99.2beta6">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="shell-completa.css">
+
+<LINK REL="previous" HREF="node215.html">
+<LINK REL="up" HREF="node214.html">
+<LINK REL="next" HREF="node217.html">
+</HEAD>
+
+<BODY >
+<script type="text/javascript"><!--
+google_ad_client = "pub-2214248376551312";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_channel ="7072435670";
+google_color_border = "000000";
+google_color_text = "000000";
+google_color_bg = "F0F0F0";
+google_color_link = "0000FF";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<!--Navigation Panel-->
+<A NAME="tex2html3154"
+  HREF="node217.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html3150"
+  HREF="node214.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html3146"
+  HREF="node215.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html3152"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/local/lib/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html3155"
+  HREF="node217.html">Claves</A>
+<B> Up:</B> <A NAME="tex2html3151"
+  HREF="node214.html">Prácticas</A>
+<B> Previous:</B> <A NAME="tex2html3147"
+  HREF="node215.html">Ejercicios propuestos</A>
+ &nbsp <B>  <A NAME="tex2html3153"
+  HREF="node1.html">&#205;ndice General</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION0001219200000000000000">
+Ejercicios resueltos sobre ficheros y directorios</A>
+</H3>
+
+<P>
+Guion de shell que genere un fichero llamado listaetc que contenga los
+ficheros con permiso de lectura que haya en el directorio /etc:
+<PRE>
+for F in /etc/*
+</PRE>
+
+<P>
+<PRE>
+do
+</PRE>
+
+<P>
+<PRE>
+if [ -f $F -a -r $F ]
+</PRE>
+
+<P>
+<PRE>
+then
+</PRE>
+
+<P>
+<PRE>
+echo $F &gt;&gt; listaetc
+</PRE>
+
+<P>
+<PRE>
+fi
+</PRE>
+
+<P>
+<PRE>
+done
+</PRE>
+
+<P>
+Hacer un guion de shell que, partiendo del fichero generado en el ejercicio
+anterior, muestre todos los ficheros del directorio /etc que contengan la palagra
+"procmail":
+<PRE>
+while read LINEA
+</PRE>
+
+<P>
+<PRE>
+do
+</PRE>
+
+<P>
+<PRE>
+if grep procmail $L &gt;/dev/null 2&gt;&amp;1
+</PRE>
+
+<P>
+<PRE>
+then
+</PRE>
+
+<P>
+<PRE>
+echo $L
+</PRE>
+
+<P>
+<PRE>
+fi
+</PRE>
+
+<P>
+<PRE>
+done &lt;listaetc
+</PRE>
+
+<P>
+Hacer un guion de shell que cuente cuantos ficheros y cuantos directorios
+hay en el directorio pasado como argumento:
+<PRE>
+DI=0
+</PRE>
+
+<P>
+<PRE>
+FI=0
+</PRE>
+
+<P>
+<PRE>
+for I in $1/*
+</PRE>
+
+<P>
+<PRE>
+do
+</PRE>
+
+<P>
+<PRE>
+if [ -f $I ]
+</PRE>
+
+<P>
+<PRE>
+then
+</PRE>
+
+<P>
+<PRE>
+let FI=FI+1
+</PRE>
+
+<P>
+<PRE>
+fi
+</PRE>
+
+<P>
+<PRE>
+if [ -d $I ]
+</PRE>
+
+<P>
+<PRE>
+then
+</PRE>
+
+<P>
+<PRE>
+let DI=DI+1
+</PRE>
+
+<P>
+<PRE>
+fi
+</PRE>
+
+<P>
+<PRE>
+done
+</PRE>
+
+<P>
+Hacer un guion de shell que compruebe si existe el directorio pasado como
+argumento dentro del directorio activo. En caso de que exista, que diga si
+no está vacío.
+<PRE>
+if [ -d $1 ]
+</PRE>
+
+<P>
+<PRE>
+then
+</PRE>
+
+<P>
+<PRE>
+echo "$1 existe"
+</PRE>
+
+<P>
+<PRE>
+N=$(ls | wc -l)
+</PRE>
+
+<P>
+<PRE>
+if [ $N -gt 0 ]
+</PRE>
+
+<P>
+<PRE>
+then
+</PRE>
+
+<P>
+<PRE>
+echo "S1 no está vacio, contiene $N ficheros no ocultos"
+</PRE>
+
+<P>
+<PRE>
+fi
+</PRE>
+
+<P>
+<PRE>
+fi
+</PRE>
+
+<P>
+Hacer un guion de shell que copie todos los ficheros del directorio actual
+en un directorio llamado csg. Si el directorio no existe el guion lo debe de
+crear.
+<PRE>
+if [ ! -d csg ]
+</PRE>
+
+<P>
+<PRE>
+then
+</PRE>
+
+<P>
+<PRE>
+mkdir csg
+</PRE>
+
+<P>
+<PRE>
+fi
+</PRE>
+
+<P>
+<PRE>
+cp * csg
+</PRE>
+
+<P>
+Hacer un script que muestre el fichero del directorio activo con más líneas:
+<PRE>
+NLIN=0
+</PRE>
+
+<P>
+<PRE>
+for I in *
+</PRE>
+
+<P>
+<PRE>
+do
+</PRE>
+
+<P>
+<PRE>
+if [ -f $I ]
+</PRE>
+
+<P>
+<PRE>
+then
+</PRE>
+
+<P>
+<PRE>
+N=$(wc -l $I)
+</PRE>
+
+<P>
+<PRE>
+if [ $N -gt $NLIN ]
+</PRE>
+
+<P>
+<PRE>
+then
+</PRE>
+
+<P>
+<PRE>
+NOMBRE=$I
+</PRE>
+
+<P>
+<PRE>
+NLIN=$N
+</PRE>
+
+<P>
+<PRE>
+fi
+</PRE>
+
+<P>
+<PRE>
+fi
+</PRE>
+
+<P>
+<PRE>
+done
+</PRE>
+
+<P>
+<PRE>
+echo "$NOMBRE tiene $NLIN lineas"
+</PRE>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html3154"
+  HREF="node217.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html3150"
+  HREF="node214.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html3146"
+  HREF="node215.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html3152"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/local/lib/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html3155"
+  HREF="node217.html">Claves</A>
+<B> Up:</B> <A NAME="tex2html3151"
+  HREF="node214.html">Prácticas</A>
+<B> Previous:</B> <A NAME="tex2html3147"
+  HREF="node215.html">Ejercicios propuestos</A>
+ &nbsp <B>  <A NAME="tex2html3153"
+  HREF="node1.html">&#205;ndice General</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Pedro Pablo
+2001-12-14
+</ADDRESS>
+</BODY>
+</HTML>

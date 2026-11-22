@@ -1,0 +1,30 @@
+To configure Switch S01 (assuming it's a Cisco switch) to manage these four VLANs, you'll need to perform several steps:
+
+    Define the VLANs: Create the VLANs globally on the switch.
+    
+    Configure Uplink as Trunk: The connection from S01 to the Core Switch (SCC) needs to be configured as a trunk port to carry traffic for all VLANs. The diagram shows TRUNK S1 (x2 - Cat. 6A), indicating an EtherChannel (Port-channel) of two Gigabit Ethernet links.
+    
+    Configure Access Ports: Assign the specific ports connected to PCs and IP Phones to their respective VLANs.
+
+Let's use example VLAN IDs:
+
+    VLAN 10: E1 Data
+    VLAN 20: E1 Voice
+    VLAN 30: E2 Data
+    VLAN 40: E2 Voice
+
+And an optional management VLAN:
+
+    VLAN 99: Management (for switch access)
+
+PCs de E2: Desde E2 PC-11 hasta E2 PC-25. Esto significa (25 - 11) + 1 = 15 PCs.
+    Estos 15 puertos se configurarán como "access" en la VLAN de datos de E2 (VLAN 30).
+    
+Teléfonos IP de E2 (IPTEL): Desde E2 IPTEL-07 hasta E2 IPTEL-10. Esto significa (10 - 7) + 1 = 4 Teléfonos IP.
+    Estos 4 puertos se configurarán como "access" con la VLAN de datos de E2 (VLAN 30) para el PC conectado al teléfono, y la VLAN de voz de E2 (VLAN 40) para el propio teléfono IP.
+
+IP PBX E2: 1 dispositivo.
+    Este 1 puerto se configurará como "access" en la VLAN de voz de E2 (VLAN 40).
+
+El diagrama indica una conexión "x20 - Cat. 6A" desde S02 a este grupo de dispositivos, lo que coincide con el recuento total de dispositivos: 
+    15 PCs + 4 IPTELs + 1 IP PBX = 20 dispositivos.

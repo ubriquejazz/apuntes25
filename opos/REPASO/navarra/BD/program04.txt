@@ -1,0 +1,15 @@
+| t0   | Creación de la base de datos.                       |
+| ---- | --------------------------------------------------- |
+| t1   | Copia de seguridad completa de la base de datos.    |
+| t2   | Copia de seguridad del registro de transacciones.   |
+| t3   | Copia de seguridad del registro de transacciones.   |
+| t4   | Copia de seguridad del registro de transacciones.   |
+| t5   | Copia de seguridad del registro de transacciones.   |
+| t6   | Copia de seguridad diferencial de la base de datos. |
+| t7   | Copia de seguridad del registro de transacciones.   |
+| t8   | Copia de seguridad del registro de transacciones.   |
+| t9   | Copia de seguridad del registro de transacciones.   |
+| t10  | Se produce el error                                 |
+
+Escenario de copia de seguridad de una BD donde t10 es el punto donde se produjo
+el error. Establecer la secuencia de reparacion a partir de dicho punto

@@ -1,0 +1,54 @@
+Practica 5. BD Olimpiadas
+
+I. Consultas DML
+----------------
+
+1. Listado alfabético de modalidades en las que ha obtenido el primer puesto el instituto ‘Romero Vargas’ (modalidad).
+
+2. Listado de alumnos que hayan participado en la modalidad 1 (alumno | instituto | género).
+
+3. Listado de institutos que hayan quedado en segundo puesto (instituto | modalidad).
+
+4. Listado alfabético de institutos (instituto | representante | localidad).
+
+5. Cantidad de participantes en la modalidad ‘Informática’ (participantes).
+
+6. Número de premios obtenidos por cada instituto ordenados descendentemente (instituto | número de premios). Deben aparecer todos los intitutos, aunque no hayan obtenido premio.
+
+7. Nombre de instituto que más oros ha tenido (instituto).
+
+8. Listado de alumnos que participen en más de una modalidad (alumno | modalidades). La columna modalidades se presentará separadas por una coma.
+
+9. Media de edad de los alumnos que participan en las diferentes modalidades (modalidad | media de edad).
+
+10. Podium de la modalidad ‘Informática’ ordenado por puesto (instituto | localidad | puesto).
+
+11. Listado alfabético de institutos que no hayan conseguido ningún premio (instituto).
+
+12. Número de institutos por cada localidad (localidad | número de institutos).
+
+13. Cantidad de alumnos que hayan nacido en el segundo semestre del año (de julio a septiembre) y que sean mujeres.
+
+
+II. Vistas.
+----------- 
+
+A. medallero (modalidad, medalla, instituto). Contendrá todas las modalidades, los diferentes premios y el instituto que lo ha obtenido. El premio debe aparecer con el texto ‘Oro’, ‘Plata’ o ‘Bronce’.
+
+B. participantes (dorsal, alumno, instituto, edad, género). Contendrá el listado total de alumnos. La columna “dorsal” se conseguirá concatenando las dos columnas que forman su clave primaria.
+
+III. Procedimientos.
+--------------------
+
+P1. Listado alfabético de los participantes de las olimpiadas indicando nombre del participante, dorsal (compuesto
+por identificador de instituto e identificador del alumno), instituto al que pertenece y localidad de éste.
+
+P2. Listado número de Oros, número de Platas y número de Bronces del instituto cuyo parámetro se recibe.
+
+P3. Listado de participantes de una determinada modalidad. El identificador de la modalidad será el parámetro de
+entrada al procedimiento y la salida debe indicar dorsal y nombre del participante. El listado estará ordenado por
+dorsal.
+
+P4. Listado del porcentaje de participantes por cada modalidad, indicando modalidad y porcentaje sobre el total.
+
+P3. Listado alfabético de localidades que NO han conseguido ninguna medalla en las Olimpiadas.

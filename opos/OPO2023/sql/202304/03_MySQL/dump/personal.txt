@@ -1,0 +1,14 @@
+1112345;"Martínez Salas, Fernando";"PROFESOR";2200.00;10
+4123005;"Bueno Zarco, Elisa";"PROFESOR";2200.00;10
+4122025;"Montes García, M.Pilar";"PROFESOR";2200.00;10
+1112346;"Rivera Silvestre, Ana";"PROFESOR";2050.00;15
+9800990;"Ramos Ruiz, Luis";"PROFESOR";2050.00;15
+8660990;"De Lucas Fdez, M.Angel";"PROFESOR";2050.00;15
+7650000;"Ruiz Lafuente, Manuel";"PROFESOR";2200.00;22
+43526789;"Serrano Laguía, María";"PROFESOR";2050.00;45
+4480099;"Ruano Cerezo, Manuel";"ADMINISTRATIVO";1800.00;10
+1002345;"Albarrán Serrano, Alicia";"ADMINISTRATIVO";1800.00;15
+7002660;"Muñoz Rey, Felicia";"ADMINISTRATIVO";1800.00;15
+5502678;"Marín Marín, Pedro";"ADMINISTRATIVO";1800.00;22
+6600980;"Peinado Gil, Elena";"CONSERJE";1750.00;22
+4163222;"Sarro Molina, Carmen";"CONSERJE";1750.00;45

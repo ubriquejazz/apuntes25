@@ -1,0 +1,22 @@
+# Rúbrica Jenkins
+
+Rubrica para el Proyecto Jenkins de 5h en el Trimestre 3
+
+| Criterio                                            | Sobresaliente (90-100%)                                      | Nivel 3: Notable (70-89%)                                    | Nivel 2: Suficiente (50-69%)                                 | Insuficiente (0-49%)                                         |
+| --------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 1. Configuración de Jenkins                         | Jenkins está configurado correctamente, es completamente operativo y sigue las mejores prácticas de configuración. | Jenkins está configurado y operativo, pero puede tener pequeñas deficiencias o no seguir las mejores prácticas en algún aspecto. | Se ha intentado configurar Jenkins, pero presenta errores significativos que impiden su funcionamiento básico. | No se ha configurado el servidor o la herramienta de CI, o la configuración es completamente errónea. |
+| 2. Integración con Control de Versiones (Git)       | La integración con Git es impecable, permitiendo una detección eficiente de cambios y un flujo de trabajo de CI fluido. | La integración con Git es funcional, pero podría ser más robusta o eficiente en la detección de cambios y la gestión de ramas. | La integración con Git es parcial o presenta fallos que impiden la detección de cambios o la clonación del repositorio. | No se ha logrado integrar el proyecto con el sistema de control de versiones (Git). |
+| 3. Automatización de la Construcción (Maven/Gradle) | La automatización de la construcción es eficiente, rápida, y genera los artefactos esperados sin errores. | La automatización de la construcción es funcional y robusta, manejando dependencias y artefactos correctamente. | La construcción se automatiza, pero falla con frecuencia o no maneja correctamente las dependencias. | La automatización de la construcción del proyecto no funciona o no se ha intentado implementar. |
+| 4. Ejecución Automatizada de Pruebas Unitarias      | Las pruebas unitarias se ejecutan automáticamente en cada cambio, con reportes claros, completos y accesibles. | Las pruebas unitarias se ejecutan automáticamente y reportan sus resultados, aunque podría haber algún detalle en la configuración o en el formato del reporte. | Las pruebas unitarias se intentan ejecutar, pero el proceso falla o no reporta los resultados de manera adecuada. | Las pruebas unitarias no se ejecutan automáticamente en el pipeline. |
+| 5. Generación de Informes de Pruebas/Cobertura      | Los informes de pruebas y cobertura se generan de forma automática, son claros, completos, fácilmente accesibles y están bien integrados en la interfaz de CI. | Los informes de pruebas y/o cobertura se generan y son legibles, aunque su integración o presentación podría mejorar. | Se intentan generar informes, pero están incompletos, son difíciles de interpretar o no están bien integrados en la interfaz de CI. | No se generan informes de pruebas o cobertura.               |
+| 6. Configuración de Notificaciones (Opcional/Extra) | Las notificaciones son robustas, configurables y alertan de manera efectiva al equipo sobre el estado del pipeline, incluyendo detalles relevantes. | Las notificaciones son funcionales y envían alertas sobre el estado del pipeline (éxito/fallo). | Se han configurado notificaciones, pero no funcionan correctamente o solo cubren un escenario limitado. | No se han configurado notificaciones automáticas del estado del pipeline. |
+
+## Enunciado
+
+**Herramientas para la integración continua del código **: Configuración de un pipeline de CI para el proyecto Java con JUnit y Mockito utilizando una de las herramientas investigadas.
+
+- Integración del control de versiones (Git).
+- Automatización de la construcción del proyecto (Maven/Gradle).
+- Automatización de la ejecución de las pruebas unitarias (JUnit).
+- Generación de informes de pruebas y cobertura de código en el pipeline de CI.
+- Notificaciones de los resultados de la construcción y las pruebas.

@@ -1,0 +1,72 @@
+Practica 1. Videoclub.
+
+1) Definición del problema
+--------------------------
+Se quiere gestionar los alquileres de películas en un videoclub. Para ello se van a almacenar los
+datos de los clientes, identificados por un código numérico, de los que se quiere almacenar su
+nombre, la fecha de alta en el videoclub, teléfono, dni y dirección. También se van a almacenar los
+datos de las películas con las que cuenta el videoclub con los datos: código identificador numérico,
+título, temática, año de creación, país de origen y precio de alquiler. Cada vez que un socio alquila
+una película hay que indicar la fecha de alquiler y, posteriormente, en el momento de devolución
+se guardará la fecha de devolución y el cliente pagará el precio de la película por los días que la ha
+tenido en alquiler.
+• Crear el modelo entidad-relación y el modelo relacional.
+• Crear en mysql una BD llamada videoclub, con las tablas necesarias.
+
+2) Introducción de datos
+-------------------------
+
+Tabla socio:
+1 Antonio Olmo García 2010-01-20 645277415 27711498D Baeza 12 5A
+2 Miguel Armas Ruíz 2010-05-23 655232367 28565225C La Veleta, 25
+3 Antonio López Carmona 2009-04-13 645234562 23106595D Álamos, 23 2ºB
+4 Teresa Sánchez López 2009-08-22 645237648 27148934G Cerón, 3
+5 María Mármol López 2010-12-12 655404145 27003478W Avda. Madrid, 9, 7ºA
+6 Rafael Montoto Hoz 2009-05-11 655908070 23785632G La luna, 2
+7 Nuria Pérez Cano 2010-11-02 645121978 23451267Q Almería, 12 2ºA
+
+Tabla pelicula:
+1 Felpudo Maldito Comedia 1995 Francia 4
+2 Two Much Comedia 1995 España 3.5
+3 El día de la bestia Comedia 1995 España 3
+4 Éxtasis Drama 1996 España 4
+5 Tesis Suspense 1995 España 4.5
+6 Apolo 13 Acción 1995 España 3
+
+Tabla alquiler:
+1 4 2010-07-12 2010-07-13
+3 7 2010-09-11 2010-09-13
+4 3 2011-01-24 \N
+4 5 2011-01-01 2011-01-03
+2 2 2011-01-21 \N
+5 1 2011-01-24 \N
+1 7 2011-01-22 2011-01-23
+
+3) Consultas sobre la BD Videoclub
+----------------------------------
+
+1. Consultar el código, nombre y fecha de ingreso en el videoclub de los socios con apellido López.
+2. ¿Cuantas personas se hicieron socias en el último trimestre de 2010?
+3. Consultar los datos de los socios ordenados por la fecha de ingreso.
+4. ¿Cuál es el precio medio de una película en el videoclub?
+5. ¿Cuántas películas están por encima del precio medio?
+6. Consultar los préstamos que han tenido una duración superior a dos días, visualizando el nombre
+del socio y el título de la película.
+7. Consultar el nombre de los socios que han alquilado la película “Desperado”.
+8. Mostrar la lista de socios y la cantidad de películas que han alquilado.
+9. Mostrar el precio que ha pagado el socio número 1 al alquilar la película 4.
+10. Mostrar la lista de películas que no han sido alquiladas.
+11. Mostrar cuánto ha ganado el videoclub en el año 2010.
+12. Mostrar las películas que están actualmente alquiladas.
+13. Mostrar el “top manta”, es decir, la lista de películas y las veces que han sido alquiladas
+ordenada descendentemente por este último dato.
+14. Mostrar el nombre y el número de teléfono de los socios que tienen películas en su casa.
+15. ¿Cuánto dinero ha gastado 'Teresa Sánchez López' en el videoclub?
+16. Consultar los nombres y códigos de socios que han alquilado películas de suspense o acción
+ordenados por código de socio
+17. Consultar el nombre y código del socio junto con el dinero total gastado de aquellos socios que
+han gastado más de 5 euros en el videoclub
+18. Mostrar las fechas en que ha sido alquilada la película “Desperado”.
+19. Mostrar la lista de películas que ha alquilado el socio con DNI 27711498D.
+20. ¿Cuál es la película española más alquilada?
+

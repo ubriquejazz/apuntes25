@@ -1,0 +1,33 @@
+Practica 3. Consultas sobre la BD series
+---------------------------------------
+
+/* 1. Listado alfab�tico de series (serie | sinopsis | a�o). */ 
+
+/* 2. Listado alfab�tico de series mostrando el n�mero de temporadas (serie | temporadas). */
+
+/* 3. Listado alfab�tico de series mostrando el n�mero de temporadas y si est� o no finalizada. Si ha finalizado debe aparecer la palabra �S͔ o nada en caso contrario (serie | temporadas | finalizada). */
+
+/* 4. Listado de series seg�n antig�edad en a�os desde la m�s antigua a la m�s moderna (serie | a�os transcurridos desde su inicio). */
+
+/* 5. Listado de usuarios que hayan visto alg�n cap�tulo pero no lo hayan valorado (usuario | serie | temporada | cap�tulo). */
+
+/* 6. Listado de cap�tulos donde aparezcan las palabras �ni�o�, �d�a� o ��rbol� (serie | cap�tulo | fecha). La fecha debe aparecer de la forma dd/mm/aaaa. */
+
+/* 7. Listado de series seguidas por el usuario �000001� ordenadas por antig�edad (serie | a�o). */
+
+/* 8. Serie mejor valorada (serie | media de valoraci�n).  */
+
+/* 9. Listado de temporadas que consten de m�s de 20 cap�tulos (serie | temporada | n�mero de cap�tulos).  */
+
+/* 10. Cap�tulos de la serie �Breaking Bad� en su primera temporada (cap�tulo | mes en que se emiti�).  */
+
+/* 11. N�mero de semanas transcurridas entre el primer y el �ltimo cap�tulo de �Juego de tronos� (n�mero de semanas en emisi�n).  */
+
+/* 12. N�mero de temporada por la que van las series no terminadas (serie | temporada).  */
+
+/* 13. Listado de series ordenado descendentemente por n�mero de seguidores (serie | n�mero de seguidores | seguidores).  */
+
+/* 14. Listado alfab�tico de series que no sigue nadie (serie | sinopsis | a�o). */
+
+/* 15. Listado de series que sigue el usuario �000001� pero que a�n no ha terminado de ver (serie). */
+

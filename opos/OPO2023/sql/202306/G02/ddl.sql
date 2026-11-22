@@ -1,0 +1,79 @@
+-- Comprobar la versión de MySQL con la que está trabajando.
+SELECT Version();
+
+-- Crear una base de datos EDITORIAL
+DROP DATABASE IF EXISTS EDITORIAL;
+CREATE DATABASE EDITORIAL CHARACTER SET utf8mb4;
+USE EDITORIAL;
+
+-- Crear un usuario US_EDIT con password
+CREATE USER us_edit@localhost 
+    IDENTIFIED BY 'password';
+
+-- Asignarle derechos totales sobre la base de datos EDITORIAL
+GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP 
+    ON EDITORIAL.*
+    TO us_edit@localhost;
+
+-- Conectarse con el usuario US_EDIT a la base de datos EDITORIAL
+mysql -u us_edit -p
+
+-- Crear las tablas  en el orden correcto con las siguientes restricciones:
+CREATE TABLE AUTORES (
+    ID_AUTOR INT(10) PRIMARY KEY, 
+    NOMBRE_AUTOR VARCHAR(50) NOT NULL,
+    PAIS VARCHAR(20)); 
+
+CREATE TABLE EDITORIALES (
+    ID_ED INT(10) PRIMARY KEY, 
+    NOMBRE_ED VARCHAR(50) NOT NULL,
+    DIRECCION_ED VARCHAR(50),
+    CIUDAD_ED VARCHAR(50),
+    PAIS_ED VARCHAR(50));
+
+CREATE TABLE LIBROS (
+    ID_LIBRO INT(10) PRIMARY KEY, 
+    TITULO VARCHAR(100) NOT NULL, 
+    ID_AUTOR INT(10), 
+    ID_EDITORIAL INT(10),
+    TEMA VARCHAR(100),
+    ISBN VARCHAR(20),
+    PRECIO FLOAT (6,2),
+    FECHA_COMPRA DATE, 
+    FECHA_PUB DATE,
+    IDIOMA VARCHAR(20),
+CONSTRAINT FK_LIBRO_AUTOR FOREIGN KEY (ID_AUTOR) REFERENCES AUTORES(ID_AUTOR),
+CONSTRAINT FK_LIBRO_EDITOR FOREIGN KEY (ID_EDITORIAL) REFERENCES EDITORIALES(ID_ED)
+);
+
+CREATE TABLE SOCIOS(
+    ID_SOCIO INT(10) PRIMARY KEY, 
+    NOMBRE_SOCIO VARCHAR(50),
+    DNI VARCHAR(10),
+    DIRECCION VARCHAR(100),
+    LOCALIDAD VARCHAR(50),
+    TELEFONO VARCHAR(12) NOT NULL);
+
+CREATE TABLE PEDIDOS (
+    ID_PEDIDO   INT(10),
+    ID_LIBRO    INT(10),
+    ID_SOCIO    INT(10),
+    UNIDADES    INT(4),
+    FECHA_PEDIDO DATE,
+    FECHA_ENVIO DATE,
+CONSTRAINT FK_PEDIDO_LIBRO FOREIGN KEY (ID_LIBRO) REFERENCES LIBROS(ID_LIBRO),
+CONSTRAINT FK_PEDIDO_SOCIO FOREIGN KEY (ID_SOCIO) REFERENCES SOCIOS(ID_SOCIO),
+CONSTRAINT PK_PEDIDO (ID_PEDIDO, ID_LIBRO, ID_SOCIO),
+CONSTRAINT CK_UNIDADES CHECK (UNIDADES BETWEEN 0 AND 100));
+
+--Comprobar que se han creado las tablas
+MariaDB [editorial]> show tables;
++---------------------+
+| Tables_in_editorial |
++---------------------+
+| AUTORES             |
+| EDITORIALES         |
+| LIBROS              |
+| PEDIDOS             |
+| SOCIOS              |
++---------------------+

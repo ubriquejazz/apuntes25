@@ -1,0 +1,15 @@
+;P;¿Cual es la capital de España?
+Paris
+Madrid
+Lisboa
+Londres
+;R;2
+;P;¿Cual de estos animales es mamifero?
+Ballena
+Pulpo
+Anguila
+;R;1
+;P;¿El rubius tiene mas de 20 millones de suscriptores?
+Verdadero
+Falso
+;R;1

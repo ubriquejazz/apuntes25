@@ -1,0 +1,40 @@
+# Core switch
+
+! Assuming GigabitEthernet0/0 and GigabitEthernet0/1 are the physical interfaces
+! that form TRUNK 00 to your RO/Firewall.
+! (Adjust interface names as per your SCC model and actual connections)
+interface range GigabitEthernet0/0 - 1
+ description Physical_Links_for_TRUNK_00_to_RO
+ channel-group 0 mode active ! Use LACP for dynamic negotiation (active) or 'on' for static
+ no shutdown
+exit
+
+! Configure the Port-channel (logical interface) for TRUNK 00
+interface Port-channel0
+ description TRUNK_00_to_Router_Firewall
+ switchport trunk encapsulation dot1q ! Essential for 802.1Q tagging
+ switchport mode trunk
+ switchport trunk allowed vlan 10,20,30,40 ! <--- THIS IS THE CRITICAL COMMAND
+ no shutdown
+exit
+
+! 2. Configure the physical interfaces for TRUNK S2 as part of an EtherChannel
+! Assuming GigabitEthernet0/2 and GigabitEthernet0/3 are the physical links to S02
+! (Adjust interface names as per your SCC model and actual connections)
+interface range GigabitEthernet0/2 - 3
+ description Physical_Links_for_TRUNK_S2_to_S02
+ channel-group 2 mode active ! Use LACP for dynamic negotiation (active). Ensure S02 is also LACP.
+ no shutdown
+exit
+
+! 3. Configure the Port-channel (logical interface) for TRUNK S2
+interface Port-channel2
+ description TRUNK_S2_to_S02_Distribution_Layer
+ switchport trunk encapsulation dot1q ! Specifies 802.1Q tagging
+ switchport mode trunk             ! Forces the port into trunking mode
+ switchport nonegotiate            ! **IMPORTANT: Disables DTP, preventing dynamic trunking**
+ switchport trunk native vlan 999  ! **IMPORTANT: Sets a dedicated, unused VLAN as the native VLAN**
+ switchport trunk allowed vlan 10,20,30,40,99 ! **IMPORTANT: Explicitly allow only necessary VLANs**
+                                              ! (Include VLAN 999 for the native VLAN to be allowed)
+ no shutdown
+exit

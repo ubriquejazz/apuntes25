@@ -1,0 +1,57 @@
+CREATE TABLE province (
+    id INT PRIMARY KEY ,
+    province VARCHAR2(25) NOT NULL
+    );
+
+INSERT INTO province VALUES (1, 'Álava');
+INSERT INTO province VALUES (2, 'Albacete');
+INSERT INTO province VALUES (3, 'Alicante');
+INSERT INTO province VALUES (4, 'Almería');
+INSERT INTO province VALUES (5, 'Ávila');
+INSERT INTO province VALUES (6, 'Badajoz');
+INSERT INTO province VALUES (7, 'Baleares');
+INSERT INTO province VALUES (8, 'Barcelona');
+INSERT INTO province VALUES (9, 'Burgos');
+INSERT INTO province VALUES (10, 'Cáceres');
+INSERT INTO province VALUES (11, 'Cádiz');
+INSERT INTO province VALUES (12, 'Castellón');
+INSERT INTO province VALUES (13, 'Ciudad Real');
+INSERT INTO province VALUES (14, 'Córdoba');
+INSERT INTO province VALUES (15, 'A Coruña');
+INSERT INTO province VALUES (16, 'Cuenca');
+INSERT INTO province VALUES (17, 'Girona');
+INSERT INTO province VALUES (18, 'Granada');
+INSERT INTO province VALUES (19, 'Guadalajara');
+INSERT INTO province VALUES (20, 'Guipúzcoa');
+INSERT INTO province VALUES (21, 'Huelva');
+INSERT INTO province VALUES (22, 'Huesca');
+INSERT INTO province VALUES (23, 'Jaén');
+INSERT INTO province VALUES (24, 'León');
+INSERT INTO province VALUES (25, 'Lleida');
+INSERT INTO province VALUES (26, 'La Rioja');
+INSERT INTO province VALUES (27, 'Lugo');
+INSERT INTO province VALUES (28, 'Madrid');
+INSERT INTO province VALUES (29, 'Málaga');
+INSERT INTO province VALUES (30, 'Murcia');
+INSERT INTO province VALUES (31, 'Navarra');
+INSERT INTO province VALUES (32, 'Ourense');
+INSERT INTO province VALUES (33, 'Asturias');
+INSERT INTO province VALUES (34, 'Palencia');
+INSERT INTO province VALUES (35, 'Las Palmas');
+INSERT INTO province VALUES (36, 'Pontevedra');
+INSERT INTO province VALUES (37, 'Salamanca');
+INSERT INTO province VALUES (38, 'Santa Cruz de Tenerife');
+INSERT INTO province VALUES (39, 'Cantabria');
+INSERT INTO province VALUES (40, 'Segovia');
+INSERT INTO province VALUES (41, 'Sevilla');
+INSERT INTO province VALUES (42, 'Soria');
+INSERT INTO province VALUES (43, 'Tarragona');
+INSERT INTO province VALUES (44, 'Teruel');
+INSERT INTO province VALUES (45, 'Toledo');
+INSERT INTO province VALUES (46, 'Valencia');
+INSERT INTO province VALUES (47, 'Valladolid');
+INSERT INTO province VALUES (48, 'Vizcaya');
+INSERT INTO province VALUES (49, 'Zamora');
+INSERT INTO province VALUES (50, 'Zaragoza');
+INSERT INTO province VALUES (51, 'Ceuta');
+INSERT INTO province VALUES (52, 'Melilla');

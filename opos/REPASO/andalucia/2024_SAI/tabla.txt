@@ -1,0 +1,15 @@
+Ejercicio 2
+
+EMPRESA(cif, nombre, direccion) 
+    PK(cif) 
+    
+PERSONA (dni, nombre, apellidos, empresa, salario) 
+    PK (dni) 
+    FK (empresa/Empresa(cif)) 
+ 
+PADREMADRE(dniPadreMadre, dniHijo) 
+    PK (dniPadreMadre, dniHijo) 
+    FK (dniPadreMadre/Persona(dni)) 
+    FK (dniHijo/Pesona(dni)) 
+
+

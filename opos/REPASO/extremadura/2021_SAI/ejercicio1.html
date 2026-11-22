@@ -1,0 +1,38 @@
+<html> 
+<head> 
+    <title>Contenedores flex</title> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <style> 
+        .contenedor_flex 
+        { 
+            display: flex;  
+            width: 400px; 
+            height:200px; 
+        } 
+
+        .flex-item  
+        { 
+            background-color: cornflowerblue; 
+            min-width: 50px; 
+            height: 50px; 
+            margin: 5px; 
+        } 
+        .contenedor_ejercicio 
+        {
+            background-color: lightgrey;
+        }
+        
+    </style> 
+</head> 
+<body> 
+    <h1>Cajas FLEX</h1> 
+    <div style="float:left; width:50%"> 
+        <div class="contenedor_flex contenedor_ejercicio"> 
+            <div class="flex-item">flex item 1</div> 
+            <div class="flex-item">flex item 2</div> 
+            <div class="flex-item">flex item 3</div> 
+            <div class="flex-item">flex item 4</div>         
+        </div> 
+    </div> 
+    </html>

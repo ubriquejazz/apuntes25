@@ -1,0 +1,52 @@
+::Q005:: Indica la forma correcta para acceder y mostrar en el navegador el primer valor señalado 200 {
+    ~echo $vars->{"cod"};
+    ~echo $vars[0]->cod;
+    ~echo $vars["cod"]->value;
+    =Todas son incorrectas      # echo $vars["cod"]
+}
+
+::Q006:: Basándonos en el código de la pregunta 5, indica la forma correcta para acceder y mostrar en el navegador el segundo valor señalado: 285.987 {
+~ echo $vars[0]["list"]->main->temp_max;
+~ echo $vars->{"list"}[0]->main->{"temp_max"};
+~ echo $vars["list"]["main"]["temp_max"]->value;
+=Todas son incorrectas          # echo $vars["list"]["main"]["temp_max"]
+}
+
+::Q007:: 7. ¿Cuál de las siguientes direcciones es la abreviatura más corta para la dirección IP:
+3FFE:1044:0000:0000:00AB:0000:0000:0057? {
+~ 3FFE:1044::AB::57
+~ 3FFE:1044::00AB::0057
+= 3FFE:1044:0:0:AB::57
+~ 3FFE:1044:0:0:00AB::0057
+}
+
+::Q008:: A quiere enviar a B un mensaje P de texto normal firmado y le transmite: Eb(Da(P)). El proceso que realizaría B sería: { 
+~ Eb(Da(Ea(Db(P)))
+= Ea(Db(Eb(Da(P)))
+~ Eb(Db(Eb(Da(P)))
+~ Todas son incorrectas
+}
+- Da es la clave privada de A y Db es la clave privada de B
+- Eb es la clave pública de B y Ea es la clave pública de A
+
+::Q109::9. El administrador de red asignó un rango de direcciones 192.168.10.0 a la LAN. Este rango de direcciones se dividió en subredes mediante el prefijo /29. Se va a utilizar la quinta subred para configurar una nueva red (la primera subred es la subred cero). La interfaz del router será la primera dirección de host utilizable y para un servidor del grupo de trabajo se utilizará la última dirección de host utilizable. ¿Qué configuración se debe introducir en las propiedades del servidor del grupo de trabajo para permitir la conectividad a Internet?
+{
+~ Dirección IP 192.168.10.30, máscara de subred 255.255.255.248, gateway predeterminado 192.168.10.25
+~ Dirección IP 192.168.10.65, máscara de subred 255.255.255.240, gateway predeterminado 192.168.10.76
+= Dirección IP 192.168.10.38, máscara de subred 255.255.255.248, gateway predeterminado 192.168.10.33
+~ Dirección IP 192.168.10.38, máscara de subred 255.255.255.248, gateway predeterminado 192.168.10.46
+}
+
+::Q010::10. Al hacer la siguiente petición https://www.undominio.com , el navegador nos avisa de un error de certificado y aceptamos el certificado {
+~ Podemos estar seguros de la identidad del servidor
+= La conexión irá cifrada mediante SSL
+~ No se iniciará la conexión https
+~ El servidor enviará la página de error 500
+}
+
+::Q010:: 11. El siguiente comando openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt {
+~Firma y obtiene un certificado de servidor para un periodo de validez de un año
+=Genera una solicitud de petición de certificado para un periodo de validez de un año
+~Incluye en el archivo server.crt los días de vigencia del certificado
+~Valida los datos del archivo server.csr antes de firmar
+}

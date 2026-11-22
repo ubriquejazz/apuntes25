@@ -1,0 +1,43 @@
+1. Dado el siguiente Esquema Conceptual según el modelo Entidad/Relación, con respecto al "ciclo" de relaciones existentes y sin perder la semántica de dicho esquema,
+
+a) Se puede quitar la relación Se_encuentra_en
+b) Se puede quitar la relación Habita
+c) No se puede quitar ninguna
+d) Todas son incorrectas
+
+
+2. Al transformar al Modelo Relacional la siguiente relación ternaria, donde ar es un atributo multievaluado de la relación,
+
+¿qué atributos formarían parte de la clave?
+
+a) a1, a2, a3
+b) a1, a2
+c) ar, a1, a2, a3
+d) Todas son incorrectas
+
+
+3. Dada la siguiente tabla donde existen las siguientes dependencias funcionales entre los campos X, Y, Z y siendo los tres campos átomicos y X la clave principal:
+
+    TABLA (X, Y, Z) 
+    X -> Y
+    Y -> Z
+    Y -> X
+
+a) No está en 2FN porque Z depende funcionalmente de Y
+b) No está en 3FN porque no está en 2FN ya que la clave está compuesta de un único campo
+c) Está en 3FN porque, aunque Z depende funcionalmente de Y, Y no depende funcionalmente de X
+d) Todas son incorrectas
+
+4. Dada la siguiente tabla y teniendo en cuenta exclusivamente las filas de datos,
+
+A   B   C   D 
+1   2   3   5
+2   0   2   6
+3   5   0   2
+1   5   0   2
+4   1   5   1
+
+a) La clave principal de la tabla debe ser AC
+b) No está en 2FN
+c) No está en 3FN porque hay una dependencia funcional transitiva entre los atributos B, C y D
+d) Todas son incorrectas

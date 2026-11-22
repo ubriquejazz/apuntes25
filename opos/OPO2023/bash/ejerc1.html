@@ -1,0 +1,394 @@
+<HTML><HEAD><title>ejerc1</title>
+<! Lugar original: http://www.ciberdroide.com>
+<! Autor: Antonio Castro Snurmacher>
+<! Fecha: 01/01/2000>
+<SCRIPT LANGUAJE="JavaScript" src="comun.js"></SCRIPT>
+<SCRIPT LANGUAJE="JavaScript" src=ejerc1.js></SCRIPT>
+</HEAD>
+<!BODY background="http://www.ciberdroide.com/FondoGeneral.gif"  bgcolor="#FFFFCC" TEXT="#003322" LINK="#0000FF" VLINK="#0042FF" ALINK="#00FF90">
+<BODY bgcolor="#FFFFFF" TEXT="#003322" LINK="#0000FF" VLINK="#0042FF" ALINK="#00FF90">
+
+<CENTER>
+<TABLE CELLPADDING=7 CELLSPACING=9 BORDER=0  WIDTH=75%>
+<TR><TD BGCOLOR="#EEEE77"><FONT SIZE=-1>
+Esta página puede ser redistribuida libremente bajo los términos de la 
+licencia GPL. Vease ( <A HREF="http://www.ciberdroide.com/gpl.html">
+GPL texto original</A> ) o si lo prefiere 
+(<A HREF="http://www.ciberdroide.com/gpl-es.html">Traducción española 
+no oficial de la GPL</A>) Al margen de las obligaciones legales que se 
+derivan del uso de esta licencia <B>rogamos</B> sea respetada la 
+referencia a su lugar de publicación original 
+<A HREF="http://www.ciberdroide.com">www.ciberdroide.com</A>.
+y a su autor original <A HREF="mailto:acastro@ciberdroide.com"> 
+Antonio Castro Snurmacher</A> (Madrid 01/01/2000). 
+</FONT>
+</TD>
+<TD>
+<A HREF="http://www.ciberdroide.com"><img align="bottom" src="http://www.ciberdroide.com/logomini.gif"></A>
+</TD>
+</TR>
+</TABLE>
+<P>
+
+<TABLE CELLPADDING=9 BORDER=0 WIDTH=75%>
+<TR><TD BGCOLOR="#000066"><FONT COLOR="#FFFFDD">
+<CENTER><B>Ausencia de Garantía</B></CENTER>
+<P>
+<B>
+Esta ausencia de garantía se hace extensa a cualquier tipo de uso de
+este material y muy especialmente a las prácticas, ejercicios, y de 
+ejemplos que encuentre en estas páginas. Deberá trabajar siempre salvo 
+indicación contraria con un SO Linux y con un usario distinto de 'root' 
+sin privilegios especiales. Como directorio de trabajo se procurará
+usar el directorio '/tmp' o algún otro que no contenga información valiosa.  
+Tampoco se considera buena idea practicar en una máquina que contenga 
+información valiosa. 
+<P>
+Todo esto son recomendaciones de prudencia.
+En cualquier caso si algo sale mal toda la responsabilidad será 
+únicamente suya. En ningún caso podrá reclamar a nadie por daños y perjuicios
+derivados del uso de este material. 
+Para más información lea el contenido de la licencia GPL y abstengase 
+de hacer prácticas si no está dispuesto a asumir toda la responsabilidad.
+</B>
+</FONT>
+<P>
+</TD>
+</TR>
+</TABLE>
+</CENTER>
+<P>
+
+<CENTER>
+<H3>
+Ejercicios resueltos de Shell-Script</H3>
+</CENTER>
+<P>
+Bueno es hora de que pruebe sus conocimientos. No se preocupe si
+no consigue resolverlos todos. Para algo están las soluciones aunque
+eso si, tendrá que descargar el archivo  <A HREF="ejerc1.tar.gz">
+ejerc1.tar.gz</A>. Disculpe la molestia pero con esto evitamos que
+sus ojos se desvíen a la solución antes de tiempo.
+<P>
+<PRE>
+
+
+
+    ---- ## donde_esta.txt ## ----
+Hacer un shell-script que busque la presencia del comando
+pasado como argumento en alguno de los directorios referenciados
+en la variable $PATH, señalando su localización y una breve
+descripción del comando caso de existir su página man.
+
+
+
+
+    ---- ## estadisticas_dir.txt ## ----
+Programe un script llamado 'estadistica_dir.sh'
+que realice un estudio de todo el arbol de directorios y
+ficheros partiendo del directorio pasado como parámetro de forma
+que obtengamos la siguiente información:
+
+Número de ficheros en los cuales disponemos de permiso de lectura   =
+Número de ficheros en los cuales disponemos de permiso de escritura =
+Número de ficheros en los cuales disponemos de permiso de ejecución =
+Número de ficheros en los cuales  carecemos de permiso de lectura   =
+Número de ficheros en los cuales  carecemos de permiso de escritura =
+Número de ficheros en los cuales  carecemos de permiso de ejecución =
+
+       Número de ficheros regulares encontrados =
+              Número de directorios encontrados =
+  Número de dispositivos de bloques encontrados =
+Número de dispositivos de carateres encontrados =
+                    Número de fifos encontrados =
+
+
+
+
+
+    ---- ## gen_menu2.txt ## ----
+Programar un shell-script que admita como argumentos parejas formadas
+por 'comando' y 'descripcion' y que construya con todo ello un menu
+de opciones donde cualquiera de los comandos pueda ser ejecutado
+seleccionando la descripcion correspondiente.
+
+Es decir si dicha shell-script se llamara 'gen_menu2.sh' un ejemplo 
+de uso sería:
+
+./gen_menu2.sh \
+	Listar ls \
+	'Quien está conectado' who \
+	'Fecha actual' date \
+	Ocupacion du \
+	'Quien soy' whoami \
+	'Memoria libre' free \
+	'Calendario' cal \
+	'Nombre máquina' hostname
+
+Con ello se obtendría un menu de la forma:
+
+
+		0 Terminar
+		1 Listar
+		2 Quien está conectado
+		3 Fecha actual
+		4 Ocupacion
+		5 Quien soy
+		6 Memoria libre
+		7 Calendario
+		8 Nombre máquina
+
+		Elija opción.
+
+
+
+
+
+    ---- ## grafica.txt ## ----
+Realizar un shell-script que reciba como argumentos numeros comprendidos 
+entre 1 y 75. Dara error en caso de que algun argumento no este
+dentro del rango y terminará sin hacer nada. En caso contrario 
+generará una linea por cada argumento con tantos asteriscos como
+indique su argumento.
+
+
+
+    ---- ## incr.txt ## ----
+
+Hacer un shell-scritp que utilice dos funciones 'incr1()' e 'incr2()'
+las cuales ejecutaran un simple bucle iterando 1000 veces. La función
+'incr1()' solo usara  un contador IND1 que sera incrementado de uno en
+uno usando un comando de tipo 'let' y la funcion 'incr2()' solo usara 
+un contador IND2 que se incrementará de uno en uno calculando su siguiente
+valor mediante el uso del comando expr.
+
+Hacer una tercera función 'PruebaDiezSegundos()' que aceptará como argumento
+el nombre de la funcion de prueba (incr1 o incr2). Primero informara del
+tiempo real, de cpu de usuario y de cpu del sistema que consume dicha
+función y luego deberá ejecutar dicha función tantas veces sea posible 
+en el transcurso de 10 segundos (aproximadamente, basta usar date '+%s')
+obteniendose el número de veces que se ejecuto en esos diez segundos. 
+
+Compare los resultados obtenidos con ambas funciones y explique los
+resultados.
+
+
+
+
+    ---- ## lista_fich.txt ## ----
+Hacer un shell-script que acepte como argumentos nombres de ficheros
+y muestre el contenido de cada uno de ellos precedido de una cabecera 
+con el nombre del fichero
+
+
+
+    ---- ## media.txt ## ----
+Hacer un shell-script que calcule la media aritmética de 
+todos los argumentos pasados como parámetros con una
+precisión de 40 digitos decimales despues de la coma.
+
+
+
+
+    ---- ## mi_banner.txt ## ----
+Localice en su sistema la utilidad 'banner' para consola. Puede haber
+mas de una utilidad para esto y algunas están pensadas para su uso
+con impresora. Nos interesa la utilidad 'banner' para terminal de
+forma que el comando 'banner hola' genere la siguiente salida:
+
+
+ #    #   ####   #         ##
+ #    #  #    #  #        #  #
+ ######  #    #  #       #    #
+ #    #  #    #  #       ######
+ #    #  #    #  #       #    #
+ #    #   ####   ######  #    #
+
+Partiendo de esta utilidad realice un shell-script 'mi_banner.sh' que 
+admita hasta tres argumentos de tamaño máximo de cuatro caracteres
+tal que el comando './mi_banner.sh hola jose luis' obtenga:
+
+ooooooooo 
+oooooooo _/        _/      _/_/_/_/      _/                  _/_/
+ooooooo _/        _/    _/        _/    _/                _/    _/
+oooooo _/_/_/_/_/_/    _/        _/    _/              _/        _/
+ooooo _/        _/    _/        _/    _/              _/_/_/_/_/_/
+oooo _/        _/    _/        _/    _/              _/        _/
+ooo _/        _/      _/_/_/_/      _/_/_/_/_/_/    _/        _/
+oo 
+ooooooooo 
+oooooooo           _/      _/_/_/_/        _/_/_/_/      _/_/_/_/_/_/
+ooooooo           _/    _/        _/    _/              _/
+oooooo           _/    _/        _/      _/_/_/_/      _/_/_/_/_/
+ooooo           _/    _/        _/              _/    _/
+oooo _/        _/    _/        _/    _/        _/    _/
+ooo   _/_/_/_/        _/_/_/_/        _/_/_/_/      _/_/_/_/_/_/
+oo 
+ooooooooo 
+oooooooo _/              _/        _/          _/          _/_/_/_/
+ooooooo _/              _/        _/          _/        _/
+oooooo _/              _/        _/          _/          _/_/_/_/
+ooooo _/              _/        _/          _/                  _/
+oooo _/              _/        _/          _/        _/        _/
+ooo _/_/_/_/_/_/      _/_/_/_/            _/          _/_/_/_/
+oo 
+
+
+
+    ---- ## mi_cal1.txt ## ----
+Realizar un shell-script 'mi_cal1.sh' que utitilzando la salida del
+comando 'cal' filtre su salida para resaltar entre corchetes
+el día actual. Ponga atención a los días a principio de línea,
+los días a final de línea.
+
+La salida para el día  5 de Mayo de 2002 debería ser la siguiente:
+
+./mi_cal1.sh
+
+      May 2002
+  S    M   Tu    W   Th    F    S
+                 1    2    3    4
+ [5]   6    7    8    9   10   11
+ 12   13   14   15   16   17   18
+ 19   20   21   22   23   24   25
+ 26   27   28   29   30   31
+
+No es un ejercicio trivial. Necesitará hacer un filtrado en varios pasos.
+Utilice alguna combinación de filtros sed encadenados con pipe.
+
+Para poder comprobar que el programa funciona correctamente para los
+distintos días hacer que en caso de pasar un argumento este será
+considerado el día del mes.
+
+./mi_cal1.sh 1
+
+      May 2002
+  S    M   Tu    W   Th    F    S
+                [1]   2    3    4
+  5    6    7    8    9   10   11
+ 12   13   14   15   16   17   18
+ 19   20   21   22   23   24   25
+ 26   27   28   29   30   31
+
+
+
+
+
+    ---- ## mi_cal2.txt ## ----
+Basandose en el ejercicio anterior realizar una modificación
+de 'mi_cal1.sh' que llamaremos 'mi_cal2.sh' que en lugar de 
+encadenar varios comandos sed con pipes creará un fichero temporal
+'/tmp/$0.$$.sed' para ser usar mediande la opción -f de sed.
+Ambos scrits deberán producir idéntico resultado.
+
+
+
+    ---- ## mi_logrotate.txt ## ----
+Asumiremos que tenemos en un directorio una serie de ficheros de
+log que van creciendo de forma ilimitada con el uso regular de
+ciertos programas.
+
+Realizar un shell-script que actue sobre los ficheros con nombre
+tipo '*.log' del directorio actual de forma tal, que si alguno de
+ellos supera en tamaño las 2000 lineas, dejará solo las últimas 
+1000 líneas del fichero y las restantes serán guardadas en un
+directorio old_rot en formato comprimido.
+
+En dicho directorio habrá que conservar en formato comprimido 
+no solo la última porción eliminada del original, sino las cuatro 
+últimas porciones eliminadas. Para ello será necesario ir rotando 
+los nombres de estos ficheros comprimidos incorporando en los mismos 
+un digito de secuencia.
+
+(parte eliminada)  --> *.log.rot1.gz --> *.log.rot2.gz --> 
+*.log.rot3.gz --> *.log.rot4.gz --> eliminado
+
+El programa durante su ejecución irá mostrando los ficheros encontrados 
+y señalará aquellos que por su tamaño sea necesario rotar.
+
+
+
+    ---- ## ocupa_tmp_log.txt ## ----
+ Obtiene la ocupacion de los directorios presentes en el sistema 
+ cuyo nombre sea de la forma '*tmp' o '*log', ordenados por orden 
+ de ocupacion.
+
+ Debera mostrar el numero de errores provocados por 'find'.
+ Si se decide usar algzn fichero temporal debera usar el
+ directorio '/tmp' para ello y usar un nombre que contenga 
+ el nombre del proceso que lo origino y su pid.
+
+
+
+
+    ---- ## palabras.txt ## ----
+Realice un shell-script que admita tres palabras como argumentos 
+y que muestre un mensaje informando de las relaciones de igualdad
+y desigualdad entre esas palabras.
+
+	"Las tres son iguales"
+	"Son iguales primera y segunda"
+	"Son iguales primera y tercera"
+	"Son iguales segunda y tercera"
+	"Son las tres distintas"
+
+
+
+    ---- ## piramide.txt ## ----
+Realice un shell-scrip 'piramide.sh' que admita como argumento un 
+número 'N' y que optenga a la salida una serie de 'N' filas de 
+forma triangular. 
+
+Para ./piramide.sh 12 la salida sería.
+
+01
+02 02
+03 03 03
+04 04 04 04
+05 05 05 05 05
+06 06 06 06 06 06
+07 07 07 07 07 07 07
+08 08 08 08 08 08 08 08
+09 09 09 09 09 09 09 09 09
+10 10 10 10 10 10 10 10 10 10
+11 11 11 11 11 11 11 11 11 11 11
+12 12 12 12 12 12 12 12 12 12 12 12
+
+
+
+
+    ---- ## proceso.txt ## ----
+Hacer un shell-script llamado 'proceso.sh' para ser lanzado en background
+que como maximo permanecera vivo 30 segundos.
+
+Podra ser lanzado varias veces en background y cada vez generara un 
+shell-script distinto 'stop_proceso.sh.<pid>' que al ser
+ejecutado matara el proceso lo origino y despues se borrara a si
+mismo.
+
+
+
+
+
+    ---- ## vigila.txt ## ----
+Realizar un shell-script que escriba en el fichero '/tmp/usuarios'
+una linea con la fecha y otra con el número de usuarios  distintos
+que estan conectados en ese momento cada dos minutos.
+
+
+</PRE>
+
+<P>
+<CENTER>
+<TABLE BORDER=0 CELLPADDING=9><TR><TD BGCOLOR="#EEFFEE"><FONT SIZE=+1>
+ Si quiere hacernos llegar alguna duda, aclaración, <BR>
+ crítica, o contribución personal, utilice nuestro <BR>
+ formulario de contacto y nosotros le contestaremos</TD>
+ <TD> <A HREF="http://www.ciberdroide.com/contacto.html"> <IMG BORDER=0 SRC="http://www.ciberdroide.com/sobre.gif" ALT="contacto"> </A>
+ </FONT></TD></TR></TABLE>
+</CENTER>
+
+<P>
+
+</BODY>
+</HTML>
